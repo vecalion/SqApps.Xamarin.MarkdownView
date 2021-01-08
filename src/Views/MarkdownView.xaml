@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="MarkdownView.Views.MarkdownView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:templateSelectors="clr-namespace:MarkdownView.TemplateSelectors;assembly=MarkdownView"
+    x:Name="Self">
+    <ContentView.Resources>
+        <templateSelectors:BlockTemplateSelector x:Key="BlockTemplateSelector" />
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout
+            BindableLayout.ItemTemplateSelector="{StaticResource BlockTemplateSelector}"
+            BindableLayout.ItemsSource="{Binding Blocks, Source={x:Reference Self}}"
+            Spacing="10"
+            VerticalOptions="Start" />
+    </ContentView.Content>
+</ContentView>

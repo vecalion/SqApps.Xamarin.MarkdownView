@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="MarkdownView.Views.Blocks.ParagraphBlockView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:MarkdownView.ViewModels;assembly=MarkdownView"
+    x:DataType="viewModels:ParagraphBlockViewModel">
+    <Label
+        FontSize="18"
+        FormattedText="{Binding FormattedText}"
+        LineHeight="1.1"
+        TextColor="{DynamicResource TextColor}">
+    </Label>
+</ContentView>
